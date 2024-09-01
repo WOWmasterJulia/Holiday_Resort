@@ -14,11 +14,13 @@ body {
 }
 /*--------------------*/
 .page{}
-   [class*="page__"] {
+   [class*="page__"],
+   .footer {
    padding-block: 64px;
 }
 @media (max-width: 767.98px){
-   [class*="page__"] {
+   [class*="page__"], 
+   .footer {
    padding-block: 32px;
    }
 }
@@ -92,6 +94,13 @@ body {
 
 .wrapper{
    min-height: 100%;
+
+   display: flex;
+   flex-direction: column;
+}
+.wrapper > main {
+   flex-grow: 1;
+   /*притиснули футер до низу*/
 }
 /*--------------------*/
 .hero {
@@ -445,5 +454,125 @@ body {
 @media (max-width: 1049.98px) {
    .section-amenities__items {
       justify-content: center;
+   }
+}
+
+/*--------------------*/
+.page__contacts {
+}
+.contacts {
+   background-color: #F4F4F4;
+}
+.contacts__container {
+   display: flex;
+   flex-direction: column;
+   gap: 64px;
+}
+.contacts__header {
+}
+/* .contacts__header:not(:last-child) {
+   margin-bottom: 64px;
+} */
+.header-block {
+}
+.header-block__title {
+}
+.header-block__text {
+}
+.contacts__items {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 32px;
+}
+.contacts__item {
+}
+.contacts__link {
+   letter-spacing: 0.8px;
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+.contacts__link::before {
+
+}
+.contacts__link-phone::before {
+   content: url(../img/contacts/phone.svg);
+}
+.contacts__link-mail::before {
+   content: url(../img/contacts/mail.svg);
+}
+.contacts__link-map::before {
+   content: url(../img/contacts/address.svg);
+}
+.contacts__social {
+}
+@media (any-hover: hover) {
+   .contacts__link:hover {
+      text-decoration: underline;
+   }
+}
+@media (max-width: 767.98px){
+   .contacts__container {
+      gap: 32px;
+   }
+   .contacts__items {
+      gap: 15px;
+   }
+}
+/*--------------------*/
+.social {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   column-gap:32px;
+   row-gap: 16px;
+}
+.social__item {
+}
+/*--------------------*/
+
+.footer {
+}
+.footer__container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 64px;
+   letter-spacing: 0.8px;
+}
+.footer__logo {
+}
+.footer__social {
+}
+.social {
+}
+.social__item {
+}
+.footer__text {
+   line-height: 1.5;
+   text-align: center;
+}
+
+.footer__copy {
+   text-align: center;
+}
+.footer__copy p:not(:last-child) {
+   margin-bottom: 15px;
+}
+.footer__copy a{
+   font-weight: 600;
+}
+@media (any-hover: hover){
+   .footer__copy a:hover{
+      text-decoration: underline;
+   }
+   .footer__text a:hover{
+      text-decoration: underline;
+   }
+}
+@media (max-width: 767.98px) {
+   .footer__container{
+      gap: 32px;
    }
 }
