@@ -1,3 +1,4 @@
 {
-   "ecsstractor_port.add_comment": false
+  "ecsstractor_port.add_comment": false,
+  "liveServer.settings.port": 5501
 }
